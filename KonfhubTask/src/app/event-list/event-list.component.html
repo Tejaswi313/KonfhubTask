@@ -1,0 +1,14 @@
+<div class="card" style="width: 25rem;" *ngFor="let event of events">
+  <!-- <img src="{{event.imageURL}}" class="card-img-top" alt="Event Details"> -->
+  <div class="card-body">
+    <h5 class="card-title">{{ (event.confName.length>36)? (event.confName | slice:0:36)+'..':(event.confName) }}</h5>
+    <p class="card-text">{{event.city}}</p>
+    <p class="card-text">{{event.confStartDate}}</p>
+    <p class="card-text">{{event.entryType}}</p>
+    <a href="{{event.confRegUrl}}" class="btn btn-primary">Visit</a>
+
+
+  </div>
+</div>
+
+
